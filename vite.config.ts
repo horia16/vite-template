@@ -2,17 +2,33 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import { VitePWA } from "vite-plugin-pwa";
+import components from "unplugin-vue-components/vite";
 import i18n from "@intlify/vite-plugin-vue-i18n";
 import esLint from "vite-plugin-eslint";
+import autoImport from "unplugin-auto-import/vite";
+import globPlugin from "vite-plugin-glob";
+import svgLoader from "vite-svg-loader";
 export default defineConfig({
     resolve: {
         alias: {
-            "@": resolve(__dirname, "./src"),
-            "vue-i18n": "vue-i18n/dist/vue-i18n.runtime.esm-bundler.js"
+            "@": resolve(__dirname, "./src")
         }
     },
     plugins: [
+        components({
+            dirs: ["./src/components", "./src/modules"],
+            dts: "src/components.d.ts",
+            deep: true
+        }),
+        globPlugin(),
+        autoImport({
+            imports: ["vue", "vue-router", "vue-i18n", "@vueuse/head", "@vueuse/core"],
+            dts: "src/auto-imports.d.ts"
+        }),
         vue(),
+        svgLoader({
+            defaultImport: "component"
+        }),
         esLint(),
         i18n({
             runtimeOnly: true,
@@ -26,6 +42,7 @@ export default defineConfig({
                 name: "Vite Stack",
                 short_name: "Vite Stack",
                 theme_color: "#ffffff",
+                display: "standalone",
                 icons: [
                     {
                         src: "/pwa-192x192.png",

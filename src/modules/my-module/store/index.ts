@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useStore = defineStore("main", {
+export const useExampleStore = defineStore("example", {
     state: () => ({ count: 0 }),
     actions: {
         increment() {

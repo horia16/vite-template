@@ -14,7 +14,7 @@
         "paths": {
             "@/*": ["./src/*"]
         },
-        "types": ["node", "vite/client", "vue/ref-macros"]
+        "types": ["node", "vite/client", "vue/ref-macros", "vite-plugin-glob/client"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "exclude": ["src/sw.ts"],
