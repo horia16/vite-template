@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useExampleStore = defineStore("example", {
+export const useMyModuleStore = defineStore("my-module", {
     state: () => ({ count: 0 }),
     actions: {
         increment() {

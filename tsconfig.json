@@ -10,6 +10,7 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "esModuleInterop": true,
+        "baseUrl": "./",
         "lib": ["esnext", "dom", "WebWorker"],
         "paths": {
             "@/*": ["./src/*"]
@@ -17,6 +18,6 @@
         "types": ["node", "vite/client", "vue/ref-macros", "vite-plugin-glob/client"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-    "exclude": ["src/sw.ts"],
+    "exclude": ["src/sw.ts", "node_modules"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
