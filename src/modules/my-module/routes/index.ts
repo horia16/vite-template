@@ -1,6 +1,6 @@
 import { RouteNames, RoutePaths } from "./types";
 import { RouteRecordRaw } from "vue-router";
-import ModuleView from "../index.vue";
+const ModuleView = () => import("../index.vue");
 
 const routes: Array<RouteRecordRaw> = [
     {

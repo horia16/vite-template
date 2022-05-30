@@ -1,8 +1,11 @@
 import { RouteNames, RoutePaths } from "./types";
 import { RouteRecordRaw } from "vue-router";
 import NotFound from "../pages/NotFound.vue";
-const moduleRoutes = Object.entries(import.meta.globEager("../modules/*/routes/index.ts")).map(([, value]) => {
-    return value.default;
+
+const moduleRoutes: Array<Array<RouteRecordRaw>> = Object.values(
+    import.meta.globEager("../modules/*/routes/index.ts")
+).map((module) => {
+    return module.default;
 });
 
 let routes: Array<RouteRecordRaw> = [
@@ -13,7 +16,7 @@ let routes: Array<RouteRecordRaw> = [
     }
 ];
 
-moduleRoutes.forEach((routeArray: Array<RouteRecordRaw>) => {
+moduleRoutes.forEach((routeArray) => {
     routes = [...routes, ...routeArray];
 });
 

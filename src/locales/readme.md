@@ -8,7 +8,7 @@ Example:
 |- en.yaml
     |- some-key: some example text
 |- ro.yaml
-    |- some-key: niste text de examplu
+    |- some-key: niste text de exemplu
 ```
 
 You will have access to your keys from the root like `t('some-key')`
