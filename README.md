@@ -8,6 +8,16 @@ This template was originally created for personal projects and is heavily inspir
 
 This template is designed using a modular approach for splitting large applications into smaller self-contained parts resulting in a lot less clutter and easier readability.
 
-## Tools used in making this template
+## Features
+
+- Vue 3, Vite 2, Typescript
+- Auto import components
+- Auto importing for APIs
+- Pinia
+- Tailwind CSS
+- PWA
+- Modular system
+- I18n
+- Vitest
 
 # WORK IN PROGRESS
