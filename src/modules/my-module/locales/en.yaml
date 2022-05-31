@@ -2,3 +2,4 @@ intro: Vue starter template
 desc: Opinionated vite starter template using a modular approach for vue projects. This template is inspired by
 tech:
     desc: What is used for this template
+next-module: Go to the next module

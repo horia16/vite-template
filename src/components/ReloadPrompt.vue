@@ -1,12 +1,14 @@
 <template>
-    <div v-if="offlineReady || needRefresh" class="pwa-toast" role="alert">
-        <div class="message">
-            <span v-if="offlineReady"> App ready to work offline </span>
-            <span v-else> New content available, click on reload button to update. </span>
+    <card v-if="offlineReady || needRefresh" class="fixed top-2 right-2" role="alert">
+        <div class="mb-4">
+            <span v-if="offlineReady" v-t="`reload-prompt.offline-ready`"></span>
+            <span v-else v-t="`reload-prompt.new-content`"></span>
         </div>
-        <button v-if="needRefresh" @click="updateServiceWorker()">Reload</button>
-        <button @click="close">Close</button>
-    </div>
+        <div class="flex gap-4">
+            <app-button v-if="needRefresh" v-t="`reload`" @click="updateServiceWorker()" />
+            <app-button v-t="`close`" @click="close" />
+        </div>
+    </card>
 </template>
 
 <script setup lang="ts">
@@ -19,29 +21,3 @@ const close = async () => {
     needRefresh.value = false;
 };
 </script>
-
-<style>
-.pwa-toast {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    margin: 16px;
-    padding: 12px;
-    border: 1px solid #8885;
-    border-radius: 4px;
-    z-index: 1;
-    text-align: left;
-    box-shadow: 3px 4px 5px 0 #8885;
-    background-color: white;
-}
-.pwa-toast .message {
-    margin-bottom: 8px;
-}
-.pwa-toast button {
-    border: 1px solid #8885;
-    outline: none;
-    margin-right: 5px;
-    border-radius: 2px;
-    padding: 3px 10px;
-}
-</style>

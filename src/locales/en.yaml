@@ -1,1 +1,6 @@
-not-found: Not found
+not-found: Page not found
+reload: Reload
+close: Close
+reload-prompt:
+    offline-ready: App ready to work offline
+    new-content: New content available, click on reload button to update.

@@ -1,12 +1,15 @@
 <template>
     <card class="mx-auto mt-12">
-        <project-logo class="w-48 h-48" />
+        <project-logo class="h-24 w-424" />
         <h1 v-t="'my-module.intro'" class="mt-12 text-2xl font-bold text-center text-gray-300"></h1>
         <counter />
         <h2 class="text-lg text-center">
             <span v-t="'my-module.desc'"></span>
             <a class="ml-1 underline" href="https://github.com/antfu/vitesse" target="_blank">Vitesse</a>.
         </h2>
+        <router-link to="/about" class="flex items-center justify-center gap-2 p-2 mt-4 border rounded"
+            ><span v-t="'my-module.next-module'"></span> <icon icon="carbon:next-filled"
+        /></router-link>
     </card>
     <card class="mx-auto mt-12">
         <h3 v-t="'my-module.tech.desc'" class="text-2xl font-bold text-center text-gray-300"></h3>

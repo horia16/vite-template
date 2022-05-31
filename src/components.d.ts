@@ -5,8 +5,10 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppButton: typeof import('./components/AppButton.vue')['default']
     Card: typeof import('./components/Card.vue')['default']
     Counter: typeof import('./modules/my-module/components/Counter.vue')['default']
+    Icon: typeof import('@iconify/vue')['Icon']
     MyModule: typeof import('./modules/my-module/index.vue')['default']
     MyOtherModule: typeof import('./modules/my-other-module/index.vue')['default']
     ReloadPrompt: typeof import('./components/ReloadPrompt.vue')['default']
