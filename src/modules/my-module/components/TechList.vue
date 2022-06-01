@@ -4,7 +4,7 @@
             <a
                 :href="item.url"
                 target="_blank"
-                class="flex items-center justify-center w-full gap-1 px-6 py-2 text-lg font-semibold text-center border rounded-md text-slate-100"
+                class="flex items-center justify-center w-full gap-1 px-6 py-2 text-lg font-semibold text-center rounded-md"
             >
                 <img v-if="item.png" class="w-[30px] h-[30px] object-contain" :src="item.png" />
                 <span v-if="item.svg" class="w-[30px] h-[30px]" v-html="item.svg" />
