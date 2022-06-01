@@ -11,14 +11,13 @@ This template is designed using a modular approach for splitting large applicati
 ## Features
 
 - Vue 3, Vite 2, Typescript
+- Modular system with automatic route loading
 - Auto import components
 - Auto importing for APIs
 - Auto importing plugins
 - Pinia
 - Tailwind CSS
 - PWA
-- Modular system with automatic route loading
 - I18n
 - Vitest
-
-# WORK IN PROGRESS
+- Nprogress
