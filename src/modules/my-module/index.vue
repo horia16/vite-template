@@ -1,4 +1,9 @@
 <template>
+    <div class="flex items-center justify-center pt-4 text-xl">
+        <a v-for="link in topLinks" :key="link.label" :title="link.label" :href="link.href" target="_blank">
+            <icon :icon="link.icon" />
+        </a>
+    </div>
     <div class="flex items-center justify-center pt-10">
         <project-logo class="w-48 h0-48" />
     </div>
@@ -9,20 +14,26 @@
     <div class="mx-auto mt-12">
         <h2 class="text-lg text-center">
             <span v-t="'my-module.desc'"></span>
-            <a class="ml-1 underline" href="https://github.com/antfu/vitesse" target="_blank">Vitesse</a>.
         </h2>
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center mt-2">
             <router-link to="/about" class="flex items-center justify-center gap-2 p-2">
                 <span v-t="'my-module.next-module'"></span> <icon icon="carbon:next-filled" />
             </router-link>
         </div>
     </div>
     <div class="mx-auto mt-12">
-        <h3 v-t="'my-module.tech.desc'" class="text-2xl font-bold text-center"></h3>
         <tech-list />
+        <editor-setup />
     </div>
 </template>
 <script setup lang="ts">
 import ProjectLogo from "@/assets/project-logo.svg";
-import DoggoLogo from "@/assets/doggo-logo.svg";
+
+const topLinks = [
+    {
+        label: "Github",
+        href: "https://github.com/horia16/vite-template",
+        icon: "carbon-logo-github"
+    }
+];
 </script>

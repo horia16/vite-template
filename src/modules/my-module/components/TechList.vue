@@ -1,14 +1,15 @@
 <template>
+    <h3 v-t="'my-module.tech.desc'" class="text-xl font-bold text-center"></h3>
     <ul class="flex flex-wrap items-center justify-center w-full gap-2 mt-6">
         <li v-for="item in techList" :key="item.name">
             <a
-                :href="item.url"
+                :href="`https://github.com/${item.url}`"
                 target="_blank"
-                class="flex items-center justify-center w-full gap-1 px-6 py-2 text-lg font-semibold text-center rounded-md"
+                class="flex items-center justify-center w-full gap-1 px-6 py-2 text-sm font-semibold text-center rounded-md"
             >
-                <img v-if="item.png" class="w-[30px] h-[30px] object-contain" :src="item.png" />
-                <span v-if="item.svg" class="w-[30px] h-[30px]" v-html="item.svg" />
-                <icon v-if="item.icon" :icon="item.icon" class="text-3xl" /> {{ item.name }}
+                <img v-if="item.png" class="w-[16px] h-[16px] object-contain" :src="item.png" />
+                <span v-if="item.svg" class="w-[16px] h-[16px]" v-html="item.svg" />
+                <icon v-if="item.icon" :icon="item.icon" class="text-base" /> {{ item.name }}
             </a>
         </li>
     </ul>
@@ -27,29 +28,49 @@ type ListItem = {
 };
 const techList: Array<ListItem> = [
     {
+        name: "Vue",
+        icon: "vscode-icons:file-type-vue",
+        url: "vuejs/core"
+    },
+    {
+        name: "Vue Router",
+        icon: "vscode-icons:file-type-vue",
+        url: "vuejs/router"
+    },
+    {
         name: "Vite",
         icon: "vscode-icons:file-type-vite",
-        url: "https://github.com/vitejs/vite"
+        url: "vitejs/vite"
     },
     {
         name: "Pinia",
         svg: PINIA_SVG,
-        url: "https://github.com/vuejs/pinia"
+        url: "vuejs/pinia"
     },
     {
         name: "VueUse",
-        svg: VUE_USE_SVG,
-        url: "https://github.com/vueuse/vueuse"
+        icon: "logos:vueuse",
+        url: "vueuse/vueuse"
     },
     {
         name: "Vue i18n",
         png: VUE_I18N_PNG,
-        url: "https://github.com/kazupon/vue-i18n"
+        url: "kazupon/vue-i18n"
+    },
+    {
+        name: "Tailwind",
+        icon: "logos:tailwindcss-icon",
+        url: "tailwindlabs/tailwindcss"
     },
     {
         name: "Iconify",
         icon: "simple-icons:iconify",
-        url: "https://github.com/iconify/iconify"
+        url: "iconify/iconify"
+    },
+    {
+        name: "NProgress",
+        icon: "carbon:progress-bar",
+        url: "rstacruz/nprogress"
     }
 ];
 </script>

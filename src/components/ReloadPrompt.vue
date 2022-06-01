@@ -1,5 +1,5 @@
 <template>
-    <card v-if="offlineReady || needRefresh" class="fixed top-2 right-2" role="alert">
+    <div v-if="offlineReady || needRefresh" class="fixed p-4 bg-gray-700 rounded shadow-xl top-2 right-2" role="alert">
         <div class="mb-4">
             <span v-if="offlineReady" v-t="`reload-prompt.offline-ready`"></span>
             <span v-else v-t="`reload-prompt.new-content`"></span>
@@ -8,7 +8,7 @@
             <app-button v-if="needRefresh" v-t="`reload`" @click="updateServiceWorker()" />
             <app-button v-t="`close`" @click="close" />
         </div>
-    </card>
+    </div>
 </template>
 
 <script setup lang="ts">
