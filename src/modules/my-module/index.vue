@@ -1,8 +1,12 @@
 <template>
+    <div class="flex items-center justify-center pt-10">
+        <doggo-logo />
+    </div>
+    <div>
+        <h1 v-t="'my-module.intro'" class="mt-12 text-4xl font-bold text-center text-black font-caveat"></h1>
+    </div>
+    <counter />
     <card class="mx-auto mt-12">
-        <project-logo class="h-24 w-424" />
-        <h1 v-t="'my-module.intro'" class="mt-12 text-2xl font-bold text-center text-gray-300"></h1>
-        <counter />
         <h2 class="text-lg text-center">
             <span v-t="'my-module.desc'"></span>
             <a class="ml-1 underline" href="https://github.com/antfu/vitesse" target="_blank">Vitesse</a>.
@@ -18,4 +22,5 @@
 </template>
 <script setup lang="ts">
 import ProjectLogo from "@/assets/project-logo.svg";
+import DoggoLogo from "@/assets/doggo-logo.svg";
 </script>
