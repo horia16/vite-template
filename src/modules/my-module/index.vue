@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="flex items-center justify-center pt-10">
-        <project-logo class="w-48 h0-48" />
+        <project-logo class="w-48 h-48" />
     </div>
     <div>
         <h1 v-t="'my-module.intro'" class="mt-12 text-4xl font-bold text-center"></h1>
