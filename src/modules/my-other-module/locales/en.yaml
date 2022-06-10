@@ -1,1 +1,2 @@
-test: This is a test for my-other-module
+desc: This is another module
+secondary-desc: This module is loaded dynamically and has a diffrent js chunk in production
