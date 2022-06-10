@@ -15,7 +15,6 @@
     </ul>
 </template>
 <script setup lang="ts">
-import VUE_USE_SVG from "@/modules/my-module/assets/svgs/vue-use.svg?raw";
 import PINIA_SVG from "@/modules/my-module/assets/svgs/pinia.svg?raw";
 import VUE_I18N_PNG from "@/modules/my-module/assets/pngs/vue-i18n.png";
 

@@ -17,7 +17,12 @@
     </div>
 </template>
 <script setup lang="ts">
-const extensions = [
+
+type ListItem = {
+    name: string;
+    url: string;
+};
+const extensions: Array<ListItem> = [
     {
         name: "Better Comments",
         url: "aaron-bond.better-comments"
