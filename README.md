@@ -1,3 +1,7 @@
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/32731652/173128666-6b6f2e8d-643c-429b-b060-cc07ea966087.svg" alt="Project logo" width="200" /> 
+</p>
+
 # Vite Modular Template
 
 This is yet another opinionated Vite template that aims to help developers with creating Vue applications.
